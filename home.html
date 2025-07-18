@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analítica de Bebidas - Potenciamos tu Distribución</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ======== HEADER (REDESIGNED) ======== -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="home.html" class="logo">Analítica de Bebidas</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#services">Soluciones</a></li>
+                    <li><a href="#preview">Ejemplos</a></li>
+                    <li><a href="index.html">Dashboard Demo</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-login">Iniciar Sesión</a>
+                <a href="#" class="btn btn-register">Registrarse</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ======== HERO SECTION ======== -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Transforma tus Datos en Decisiones Rentables</h1>
+                <p>La plataforma de inteligencia de negocios para distribuidores de bebidas. Visualiza tu rendimiento, optimiza tus rutas y maximiza tus ventas.</p>
+            </div>
+        </section>
+
+        <!-- ======== SERVICES SECTION ======== -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Nuestras Soluciones</h2>
+                    <p>Convertimos tus reportes de ventas en un panel de control intuitivo y poderoso. Haz clic para saber más.</p>
+                </div>
+                <div class="features-grid">
+                    <a href="servicio-vendedores.html" class="feature-card-link">
+                        <div class="feature-card">
+                            <h3>Análisis de Vendedores</h3>
+                            <p>Identifica a tus mejores vendedores y analiza su rendimiento para replicar el éxito en todo tu equipo.</p>
+                        </div>
+                    </a>
+                    <a href="servicio-canales.html" class="feature-card-link">
+                        <div class="feature-card">
+                            <h3>Inteligencia de Canales</h3>
+                            <p>Descubre qué canales son más rentables y qué productos prefieren para crear estrategias de venta efectivas.</p>
+                        </div>
+                    </a>
+                    <a href="servicio-productos.html" class="feature-card-link">
+                        <div class="feature-card">
+                            <h3>Optimización de Productos</h3>
+                            <p>Entiende qué productos son tus "estrellas" y gestiona tu portafolio para maximizar la rentabilidad.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== DASHBOARD PREVIEW SECTION (NEW DESIGN) ======== -->
+        <section id="preview" class="preview-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Visualiza el Poder de tus Datos</h2>
+                    <p>Nuestros dashboards te permiten interactuar con tu información de una forma nunca antes vista.</p>
+                </div>
+                <div class="charts-container">
+                    <!-- SVG Bar Chart -->
+<div class="chart-wrapper">
+    <svg viewBox="0 0 300 200" class="chart-svg" role="img" aria-label="Ejemplo de gráfico de barras">
+        <!-- Style moved to external CSS -->
+        <g class="bar-chart">
+            <!-- transform-origin is set inline for each bar to scale from its base -->
+            <rect class="bar" x="20" y="80" width="40" height="100" rx="3" fill="#3498db" style="transform-origin: center 180px;"><title>Categoría A</title></rect>
+            <rect class="bar" x="70" y="40" width="40" height="140" rx="3" fill="#e74c3c" style="transform-origin: center 180px;"><title>Categoría B</title></rect>
+            <rect class="bar" x="120" y="100" width="40" height="80" rx="3" fill="#9b59b6" style="transform-origin: center 180px;"><title>Categoría C</title></rect>
+            <rect class="bar" x="170" y="60" width="40" height="120" rx="3" fill="#1abc9c" style="transform-origin: center 180px;"><title>Categoría D</title></rect>
+            <rect class="bar" x="220" y="120" width="40" height="60" rx="3" fill="#f1c40f" style="transform-origin: center 180px;"><title>Categoría E</title></rect>
+            <line x1="10" y1="180" x2="280" y2="180" stroke="#bdc3c7" stroke-width="2"/>
+        </g>
+    </svg>
+    <h3>Rendimiento por Canal</h3>
+</div>
+                    <!-- SVG Pie Chart -->
+<div class="chart-wrapper">
+    <svg viewBox="0 0 200 200" class="chart-svg" role="img" aria-label="Ejemplo de gráfico de torta">
+        <!-- Style moved to external CSS -->
+        <g class="pie-chart-g" transform="rotate(-90 100 100)">
+            <!-- transform-origin is set in the CSS for pie slices -->
+            <circle class="slice" r="45" cx="100" cy="100" fill="transparent" stroke="#3498db" stroke-width="90" stroke-dasharray="113.1 282.74">
+                <title>Producto A: 40%</title>
+            </circle>
+            <circle class="slice" r="45" cx="100" cy="100" fill="transparent" stroke="#9b59b6" stroke-width="90" stroke-dasharray="70.69 282.74" stroke-dashoffset="-113.1">
+                <title>Producto B: 25%</title>
+            </circle>
+            <circle class="slice" r="45" cx="100" cy="100" fill="transparent" stroke="#e74c3c" stroke-width="90" stroke-dasharray="56.55 282.74" stroke-dashoffset="-183.79">
+                <title>Producto C: 20%</title>
+            </circle>
+            <circle class="slice" r="45" cx="100" cy="100" fill="transparent" stroke="#1abc9c" stroke-width="90" stroke-dasharray="42.41 282.74" stroke-dashoffset="-240.34">
+                <title>Producto D: 15%</title>
+            </circle>
+        </g>
+    </svg>
+    <h3>Mix de Productos</h3>
+</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2024 Analítica de Bebidas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- No es necesario un script.js para esta página, pero lo mantenemos por si se añade funcionalidad futura -->
+    <script src="script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,295 @@
+/* ======== GLOBAL STYLES (REDESIGNED) ======== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --primary-blue: #3498db;
+    --primary-blue-dark: #2980b9;
+    --border-color: #ecf0f1;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ======== HEADER ======== */
+.main-header {
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after, .main-nav a.active::after {
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 9px 24px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-login {
+    background-color: transparent;
+    border-color: var(--border-color);
+    color: var(--text-dark);
+}
+.btn-login:hover {
+    background-color: var(--border-color);
+}
+
+.btn-register {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--bg-white);
+}
+.btn-register:hover {
+    background-color: var(--primary-blue-dark);
+    border-color: var(--primary-blue-dark);
+}
+
+/* ======== HERO SECTION ======== */
+.hero {
+    position: relative;
+    height: 55vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--bg-white);
+    background: url('https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+}
+
+pie-chart-g .slice {
+    transform-origin: 100px 100px; /* Center of the viewBox */
+    transition: all 0.3s ease;
+}
+.pie-chart-g:hover .slice {
+    transform: scale(0.97);
+    opacity: 0.8;
+}
+.pie-chart-g .slice:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.5));
+}
+
+.hero-content {
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2em;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* ======== GENERAL SECTION STYLING ======== */
+.services-section, .preview-section {
+    padding: 80px 0;
+}
+
+.preview-section {
+    background-color: var(--bg-white);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.3em;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    font-size: 1.1em;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ======== FEATURES GRID ======== */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.feature-card {
+    background-color: var(--bg-white);
+    padding: 35px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.feature-card-link:hover .feature-card {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card h3 {
+    color: var(--primary-blue);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+/* ======== PREVIEW SECTION & CHARTS (FINAL & UNIFIED) ======== */
+.charts-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.chart-wrapper {
+    text-align: center;
+    flex-basis: 320px;
+}
+
+.chart-svg {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    cursor: pointer;
+    overflow: visible; /* Allows hover effect to expand outside the box */
+}
+
+.chart-wrapper h3 {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* --- UNIFIED INTERACTION STYLES for both charts --- */
+
+/* Style for individual data elements (bars or pie slices) */
+.bar, .slice {
+    transition: all 0.25s ease-in-out;
+}
+
+/* When hovering over the entire chart container (g) */
+.bar-chart:hover .bar,
+.pie-chart-g:hover .slice {
+    opacity: 0.7;
+}
+
+/* When hovering over a SPECIFIC data element */
+.bar-chart .bar:hover,
+.pie-chart-g .slice:hover {
+    opacity: 1;
+    transform: scale(1.08); /* A slightly larger scale for better effect */
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav { display: none; }
+    .hero h1 { font-size: 2.4em; }
+    .hero p { font-size: 1.1em; }
+    .section-title h2 { font-size: 2em; }
+}
+
+/* Estilos para las páginas de detalle (y el dashboard) que ya tenías */
+/* Si tenías más estilos aquí, puedes mantenerlos */
+/* Por ejemplo, los estilos del dashboard: .analysis-grid, .analysis-card, etc. */
+/* O los de la página de detalle: .service-detail-page, etc. */

@@ -1,0 +1,32 @@
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Interactive Tabs Logic ---
+    const tabsContainer = document.querySelector('.tabs');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    const tabButtons = document.querySelectorAll('.tab-button');
+
+    if (tabsContainer) {
+        tabsContainer.addEventListener('click', (e) => {
+            // Check if a tab button was clicked
+            if (e.target.matches('.tab-button')) {
+                const tabId = e.target.dataset.tab;
+                
+                // Remove 'active' class from all buttons and panes
+                tabButtons.forEach(button => button.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                // Add 'active' class to the clicked button
+                e.target.classList.add('active');
+
+                // Add 'active' class to the corresponding pane
+                const activePane = document.getElementById(tabId);
+                if (activePane) {
+                    activePane.classList.add('active');
+                }
+            }
+        });
+    }
+
+});
